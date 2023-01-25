@@ -10,7 +10,7 @@
 - By using the private ssh keys using we created using the command "Ssh-keygen -t rsa"
 ​
 ### How did you get the Github repo to trigger the build?
-- In source-code manaement we also ticked the git box and added our URL's again using our private ssh keys we generated
+- In source-code management we also ticked the git box and added our URL's again using our private ssh keys we generated
 - Implemented a Github webhook and also entered a payloadURL with a jenkins URL. This is then triggered through an event such as a push / pull.
 ​
 ---
