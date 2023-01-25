@@ -19,11 +19,14 @@
 - On a successfull test build through CI. In the post build section of Jenkins there was an option to 'trigger only if build is stable'. If success than it will build & intergrate into the main branch.
 ​
 ### How did you allow Jenkins access to the EC2 instance?
-- Added our EC2 Public IP to the nology proxy configure file and we also had to include our AWS key to the abuntu VM.
+- In the build enviromemnt in Jenkins we enabled the SSH Agent box and specificed the credentials. 
+The step was add - pick kind - private key (our AWS private key)
+- Then on EC2  we selected the security settings within our instance. Added 'JenkinsDeployment' option to the security settings.
 
 ​
 ### How did you get the CI project to trigger the CD build?
-- If successfull a post-build action would be in place to trigger the CD build.
+- If the project is successfull a post-build action would be in place to trigger the CD build.
+- The post build action is called 'build other projects'
 ​
 ---
 
